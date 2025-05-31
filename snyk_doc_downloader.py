@@ -7,6 +7,7 @@ def download_and_merge_snyk_docs():
     summary_url = "https://raw.githubusercontent.com/snyk/user-docs/refs/heads/main/docs/SUMMARY.md"
     base_doc_url = "https://raw.githubusercontent.com/snyk/user-docs/refs/heads/main/docs/"
     base_snyk_docs_url = "https://docs.snyk.io/"  # Base URL for the Snyk documentation
+    subfolder = "docs/"
 
     try:
         response = requests.get(summary_url)
@@ -44,9 +45,9 @@ def download_and_merge_snyk_docs():
                 print(f"Processing {doc_url} -> {md_filename} (Source URL: {snyk_source_url})")
 
                 # Check if the markdown file already exists
-                if os.path.exists(md_filename):
+                if os.path.exists(subfolder + md_filename):
                     print(f"Skipping download: {md_filename} already exists.")
-                    downloaded_md_files.append(md_filename)  # Still add to list for merging
+                    downloaded_md_files.append(subfolder + md_filename)  # Still add to list for merging
                     continue  # Skip to the next line in the summary
 
                 try:
@@ -62,9 +63,9 @@ Source URL: {snyk_source_url}
 """
                     full_content = system_prompt + doc_response.text
 
-                    with open(md_filename, 'w', encoding='utf-8') as f:
+                    with open(subfolder + md_filename, 'w', encoding='utf-8') as f:
                         f.write(full_content)
-                    downloaded_md_files.append(md_filename)
+                    downloaded_md_files.append(subfolder + md_filename)
                 except requests.exceptions.RequestException as e:
                     print(f"Error downloading {doc_url}: {e}")
                     continue
@@ -72,7 +73,7 @@ Source URL: {snyk_source_url}
     output_md_name = "snyk-docs.md"
     print(f"\nMerging individual Markdown files into {output_md_name}...")
     try:
-        with open(output_md_name, 'w', encoding='utf-8') as outfile:
+        with open(subfolder + output_md_name, 'w', encoding='utf-8') as outfile:
             for md_file in sorted(downloaded_md_files):  # Ensure consistent order
                 with open(md_file, 'r', encoding='utf-8') as infile:
                     outfile.write(infile.read())

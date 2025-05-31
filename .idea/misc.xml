@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.13 (snyk_doc_downloader)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (snyk_doc_downloader)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (snyk-docs-downloader)" project-jdk-type="Python SDK" />
 </project>
