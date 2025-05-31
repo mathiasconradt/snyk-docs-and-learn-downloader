@@ -1,6 +1,6 @@
 # Snyk Docs Downloader
 
-Retrieve all markdown files from the Snyk User Docs Github repo and merge it into a single markdown file called snyk-docs.md, which can then be used to add context to an LLM and query it.
+Retrieve all markdown files from the Snyk User Docs Github repo and merge it into a single markdown file called `snyk-docs.md`, which can then be used to add context to an LLM and query it.
 
 ```
 uv pip install -r requirements.txt
