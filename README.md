@@ -9,7 +9,7 @@ uv pip install -r requirements.txt
 uv run snyk_doc_downloader.py
 ```
 
-## Gemini Prompt
+## LLM Prompt
 
 ```
 Refer to attached md file. Always list the source urls for your answers as stated in the doc for the relevant section. Do not make URLs up that are not in the markdown file and do not use google.com/search urls. Only show source urls that are actually in the md file.
