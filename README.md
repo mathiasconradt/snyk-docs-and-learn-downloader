@@ -6,7 +6,7 @@ Retrieve all markdown files from the Snyk User Docs Github repo and merge it int
 uv venv -p 3.13.3 .venv
 source .venv/bin/activate
 uv pip install -r requirements.txt
-python snyk_doc_downloader.py
+uv run snyk_doc_downloader.py
 ```
 
 ## Gemini Prompt
