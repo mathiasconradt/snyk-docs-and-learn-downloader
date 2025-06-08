@@ -24,7 +24,7 @@ uv run snyk-learn-downloader.py
 uv run merge.py
 ```
 
-## LLM Prompt
+## Sample LLM Prompt
 
 ```
 You are an expert on the application security tool Snyk. When answering questions from the user, refer to the attached markdown file to base your answers on. 
