@@ -73,7 +73,7 @@ Source URL: {snyk_source_url}
     output_md_name = "snyk-docs.md"
     print(f"\nMerging individual Markdown files into {output_md_name}...")
     try:
-        with open(subfolder + output_md_name, 'w', encoding='utf-8') as outfile:
+        with open(output_md_name, 'w', encoding='utf-8') as outfile:
             for md_file in sorted(downloaded_md_files):  # Ensure consistent order
                 with open(md_file, 'r', encoding='utf-8') as infile:
                     outfile.write(infile.read())
