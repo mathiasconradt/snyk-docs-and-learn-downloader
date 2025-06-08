@@ -2,7 +2,7 @@
 
 Use `snyk-docs-downloader.py` to retrieve all markdown files from the Snyk User Docs Github repo (https://github.com/snyk/user-docs/blob/main/docs/SUMMARY.md) and merge it into a single markdown file called `snyk-docs.md`, which can then be used to add context (RAG) to an LLM and query it.
 
-Use `snyk-learn-downloader.py` to retrieve all content (converting html to markdown) from Snyk Learn ([https://github.com/snyk/user-docs/blob/main/docs/SUMMARY.md](https://api.snyk.io/v1/learn/lessons)) and merge it into a single markdown file called `snyk-learn.md`, which can then be used to add context (RAG) to an LLM and query it.
+Use `snyk-learn-downloader.py` to retrieve all content (converting html to markdown) from Snyk Learn ([ttps://api.snyk.io/v1/learn/lessons](https://api.snyk.io/v1/learn/lessons)) and merge it into a single markdown file called `snyk-learn.md`, which can then be used to add context (RAG) to an LLM and query it.
 
 Optionally, merge both outputs into a single file `snyk-docs-and-learn.md` with `merge.py`.
 
