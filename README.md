@@ -40,6 +40,6 @@ What is an sql injection and how to avoid it?
 Also, I use snyk with gitlab and the broker, as its onpremise. how to configure it and how to best debug it?
 ```
 
-![ChatGPT Sample](sample-chatgpt.png)
+![ChatGPT Sample](img/sample-chatgpt.png)
 
-![Gemini Sample](sample-gemini.png)
+![Gemini Sample](img/sample-gemini.png)
