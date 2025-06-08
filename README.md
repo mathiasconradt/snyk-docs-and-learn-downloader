@@ -1,12 +1,15 @@
-# Snyk Docs Downloader
+# Snyk Docs and Learn Downloader
 
-Retrieve all markdown files from the Snyk User Docs Github repo and merge it into a single markdown file called `snyk-docs.md`, which can then be used to add context (RAG) to an LLM and query it.
+Retrieve all markdown files from the Snyk User Docs Github repo (https://github.com/snyk/user-docs/blob/main/docs/SUMMARY.md) and merge it into a single markdown file called `snyk-docs.md`, which can then be used to add context (RAG) to an LLM and query it.
+
+Retrieve all content (converting html to markdown) from Snyk Learn ([https://github.com/snyk/user-docs/blob/main/docs/SUMMARY.md](https://api.snyk.io/v1/learn/lessons)) and merge it into a single markdown file called `snyk-learn.md`, which can then be used to add context (RAG) to an LLM and query it.
 
 ```
 uv venv -p 3.13.3 .venv
 source .venv/bin/activate
 uv pip install -r requirements.txt
-uv run snyk_doc_downloader.py
+uv run snyk-doc-downloader.py
+uv run snyk-learn-downloader.py
 ```
 
 ## LLM Prompt
