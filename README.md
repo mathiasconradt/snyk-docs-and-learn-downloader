@@ -4,6 +4,8 @@ Use `snyk-docs-downloader.py` to retrieve all markdown files from the Snyk User 
 
 Use `snyk-learn-downloader.py` to retrieve all content (converting html to markdown) from Snyk Learn ([ttps://api.snyk.io/v1/learn/lessons](https://api.snyk.io/v1/learn/lessons)) and merge it into a single markdown file called `snyk-learn.md`, which can then be used to add context (RAG) to an LLM and query it.
 
+After the content of each page is scraped and before it's stored to file, a system prompt is automatically added at the top of each page, instructing to always name the original source URL, so that the original source URL is being kept.
+
 Optionally, merge both outputs into a single file `snyk-docs-and-learn.md` with `merge.py`.
 
 ```
