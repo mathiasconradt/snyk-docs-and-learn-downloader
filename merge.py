@@ -46,5 +46,8 @@ file_one = "snyk-docs.md"
 file_two = "snyk-learn.md"
 output_file = "snyk-docs-and-learn.md"
 
+# Final folder path
+final = "final/"
+
 # Call the function to merge the files
-merge_markdown_files(file_one, file_two, output_file)
+merge_markdown_files(final + file_one, final + file_two, final + output_file)

@@ -83,9 +83,11 @@ Source URL: {lesson_url}
         else:
             print(f"Could not find div with class 'content' in {lesson_url}")
 
+    # Final folder path
+    final = "final/"
     # Merge all created markdown files into one
     merged_output_filepath = "snyk-learn.md"
-    with open(merged_output_filepath, "w", encoding="utf-8") as outfile:
+    with open(final + merged_output_filepath, "w", encoding="utf-8") as outfile:
         for filename in os.listdir(output_dir):
             if filename.endswith(".md"):
                 filepath = os.path.join(output_dir, filename)
